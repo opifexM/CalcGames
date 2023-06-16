@@ -8,10 +8,12 @@ const startGame = (getIntroduction, getGameData) => {
   const name = getUserAnswer('May I have your name?: ');
   sendConsoleText(`Hello, ${name}`);
 
-  if (startTurn(GAME_ATTEMPTS, getIntroduction, getGameData)) {
-    sendConsoleText(`Congratulations, ${name}!`);
-  } else {
-    sendConsoleText(`Let's try again, ${name}!`);
+  if (typeof getIntroduction === 'function' && typeof getGameData === 'function') {
+    if (startTurn(GAME_ATTEMPTS, getIntroduction, getGameData)) {
+      sendConsoleText(`Congratulations, ${name}!`);
+    } else {
+      sendConsoleText(`Let's try again, ${name}!`);
+    }
   }
 };
 
