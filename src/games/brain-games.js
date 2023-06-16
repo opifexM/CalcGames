@@ -14,4 +14,5 @@ const startGame = (getIntroduction, getGameData) => {
     sendConsoleText(`Let's try again, ${name}!`);
   }
 };
+
 export default startGame;

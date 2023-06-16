@@ -24,4 +24,8 @@ const getGameData = () => {
   };
 };
 
-startGame(getIntroduction, getGameData);
+const start = () => {
+  startGame(getIntroduction, getGameData);
+};
+
+export default start;
