@@ -16,9 +16,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: ls
       - uses: actions/checkout@v3
-
+      - name: Set execute permissions
+        run: chmod +x ./path/to/your/brain-games.js
       - name: Hexlet project check
         uses: hexlet/project-action@release
         with:
