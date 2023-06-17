@@ -18,8 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set execute permissions
-#        run: chmod +x ./path/to/your/brain-games.js
-        run: ls
+        run: chmod +x bin/brain-games.js
       - name: Hexlet project check
         uses: hexlet/project-action@release
         with:
