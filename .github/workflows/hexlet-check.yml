@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: chmod +x bin/brain-games
+      - run: ls
       - uses: actions/checkout@v3
 
       - name: Hexlet project check
