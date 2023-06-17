@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 import startGame from '../src/games/brain-games.js';
 
-startGame();
+console.log("123");
+// startGame();
