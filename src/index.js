@@ -4,7 +4,8 @@ const startTurn = (maxGame, getIntroduction, getGameData) => {
   const gameData = Array.from({ length: maxGame }, getGameData);
 
   sendConsoleText(getIntroduction());
-  for (const element of gameData) {
+  for (let i = 0; i < gameData.length; i += 1) {
+    const element = gameData[i];
     const {
       question: currentQuestion,
       answer: correctAnswer,
