@@ -16,14 +16,13 @@ const getGameData = () => {
       question += ' ';
     }
     if (i === hideIndex) {
-      answer = lastNumber;
+      answer = String(lastNumber);
       question += '..';
     } else {
       question += `${lastNumber}`;
     }
     lastNumber += difference;
   }
-
   return {
     question,
     answer,
