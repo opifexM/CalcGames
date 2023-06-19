@@ -11,11 +11,14 @@ const getGameData = () => {
   let question = '';
   let answer = '';
   for (let i = 1; i <= getRandomInteger(5, 10); i++) {
+    if (question.length > 1) {
+      question += ' ';
+    }
     if (i === hideIndex) {
       answer = lastNumber;
-      question += ' ..';
+      question += '..';
     } else {
-      question += ` ${lastNumber}`;
+      question += `${lastNumber}`;
     }
     lastNumber += difference;
   }
