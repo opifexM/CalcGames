@@ -5,13 +5,14 @@ import startGame from './brain-games.js';
 const getIntroduction = () => 'What number is missing in the progression?';
 
 const getGameData = () => {
-  const hideIndex = getRandomInteger(2, 10);
-  let lastNumber = getRandomInteger(1, 100);
-  const difference = getRandomInteger(1, 100);
+  const totalNumbers = getRandomInteger(5, 10);
+  const hideIndex = getRandomInteger(2, totalNumbers);
+  let lastNumber = getRandomInteger(1, 10);
+  const difference = getRandomInteger(1, 10);
   let question = '';
   let answer = '';
-  for (let i = 1; i <= getRandomInteger(5, 10); i++) {
-    if (question.length > 1) {
+  for (let i = 1; i <= totalNumbers; i++) {
+    if (question.length > 0) {
       question += ' ';
     }
     if (i === hideIndex) {
