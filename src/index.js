@@ -1,14 +1,14 @@
 import { getUserAnswer, sendConsoleText } from './cli.js';
 
 const startTurn = (maxGame, getIntroduction, getGameData) => {
-
   const gameData = Array.from({ length: maxGame }, getGameData);
 
   sendConsoleText(getIntroduction());
-  for (const {
-    question: currentQuestion,
-    answer: correctAnswer
-  } of gameData) {
+  for (const element of gameData) {
+    const {
+      question: currentQuestion,
+      answer: correctAnswer,
+    } = element;
     sendConsoleText(`Question: ${currentQuestion}`);
     const userAnswer = getUserAnswer('Your answer: ');
     if (userAnswer === correctAnswer) {

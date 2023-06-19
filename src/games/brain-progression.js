@@ -11,7 +11,7 @@ const getGameData = () => {
   const difference = getRandomInteger(1, 10);
   let question = '';
   let answer = '';
-  for (let i = 1; i <= totalNumbers; i++) {
+  for (let i = 1; i <= totalNumbers; i += 1) {
     if (question.length > 0) {
       question += ' ';
     }
