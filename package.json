@@ -1,29 +1,65 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/opifexM/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/opifexM/fullstack-javascript-project-44/actions)",
-  "main": "index.js",
+  "description": "first project in Hexlet frontend course",
+  "main": "./bin/brain-games.js",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bin": {
-    "brain-games": "src/games/brain-games.js",
-    "brain-even": "src/games/brain-even.js",
-    "brain-calc": "src/games/brain-calc.js",
-    "brain-gcd": "src/games/brain-gcd.js",
-    "brain-progression": "src/games/brain-progression.js",
-    "brain-prime": "src/games/brain-prime.js"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sseezov/frontend-project-44.git"
   },
+  "author": "sseezov@mail.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sseezov/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/sseezov/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
+    "eslint": "^8.23.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-plugin-import": "^2.26.0"
   }
 }
+//{
+//  "name": "@hexlet/code",
+//  "version": "1.0.0",
+//  "description": "[![Actions Status](https://github.com/opifexM/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/opifexM/fullstack-javascript-project-44/actions)",
+//  "main": "index.js",
+//  "scripts": {
+//    "test": "echo \"Error: no test specified\" && exit 1"
+//  },
+//  "keywords": [],
+//  "author": "",
+//  "license": "ISC",
+//  "type": "module",
+//  "bin": {
+//    "brain-games": "src/games/brain-games.js",
+//    "brain-even": "src/games/brain-even.js",
+//    "brain-calc": "src/games/brain-calc.js",
+//    "brain-gcd": "src/games/brain-gcd.js",
+//    "brain-progression": "src/games/brain-progression.js",
+//    "brain-prime": "src/games/brain-prime.js"
+//  },
+//  "dependencies": {
+//    "readline-sync": "^1.4.10"
+//  },
+//  "devDependencies": {
+//    "eslint": "^8.42.0",
+//    "eslint-config-airbnb-base": "^15.0.0",
+//    "eslint-plugin-import": "^2.27.5"
+//  }
+//}
