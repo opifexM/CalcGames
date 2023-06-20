@@ -1,7 +1,7 @@
 {
-  "name": "@hexlet/code",
+  "name": "CalcGames",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/opifexM/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/opifexM/fullstack-javascript-project-44/actions)",
+  "description": "The set of mini-games launched from the console",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
