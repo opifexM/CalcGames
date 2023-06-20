@@ -1,5 +1,5 @@
 {
-  "name": "CalcGames",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "The set of mini-games launched from the console",
   "main": "index.js",
