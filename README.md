@@ -12,7 +12,8 @@ This project is a set of mini-games launched from the console. The project is im
 -   Node.js
 -   npm
 -   readline-sync
--   GitHub Actions (hexlet-check)
+-   GitHub Actions
+-   ESLint
 
 ### The project includes several games
 
