@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { initiateProgressionGame } from '../dist/src/index.js';
+import { initiateProgressionGame } from 'src/index.js';
 initiateProgressionGame();

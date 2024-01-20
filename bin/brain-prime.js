@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { initiatePrimeGame } from '../dist/src/index.js';
+import { initiatePrimeGame } from 'src/index.js';
 initiatePrimeGame();
