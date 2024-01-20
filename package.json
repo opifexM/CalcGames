@@ -6,7 +6,8 @@
   "main": "bin/index.js",
   "scripts": {
     "build": "tsc --build --clean && tsc --build",
-    "lint": "eslint src/",
+    "lint:TS": "eslint src/",
+    "lint:JS": "eslint dist/",
     "cli:games": "tsx bin/brain-games.ts",
     "cli:even": "tsx bin/brain-even.ts",
     "cli:calc": "tsx bin/brain-calc.ts",
@@ -39,6 +40,8 @@
     "@typescript-eslint/parser": "6.19.0",
     "concurrently": "8.2.2",
     "eslint": "8.56.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.29.1",
     "eslint-plugin-optimize-regex": "1.2.1",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-simple-import-sort": "10.0.0",
