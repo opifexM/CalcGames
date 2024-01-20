@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import { initiateCalcGame } from '../dist/src/index.js';
-initiateCalcGame();
+import start from '../src/games/brain-calc.js';
+
+start();

@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import { initiateGreeting } from '../dist/src/index.js';
-initiateGreeting();
+import startGame from '../src/games/brain-games.js';
+
+startGame();
