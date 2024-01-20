@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { initiateGreeting } from '../src/index.js';
+import { initiateGreeting } from '../dist/src/index.js';
 initiateGreeting();

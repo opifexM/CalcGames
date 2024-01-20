@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { initiateCalcGame } from '../src/index.js';
+import { initiateCalcGame } from '../dist/src/index.js';
 initiateCalcGame();
