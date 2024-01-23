@@ -1,8 +1,5 @@
-#!/usr/bin/env node
+import startGame from '../index.js';
 import getRandomInteger from '../utils/random.js';
-import startGame from './brain-games.js';
-
-const getIntroduction = () => 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   if (!b) {
@@ -11,20 +8,24 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
+/**
+ *
+ * @returns {GameData}
+ */
 const getGameData = () => {
-  const first = getRandomInteger(1, 100);
-  const second = getRandomInteger(1, 100);
+  const introduction = 'Find the greatest common divisor of given numbers.';
+  const first = getRandomInteger();
+  const second = getRandomInteger();
   const question = `${first} ${second}`;
-  const answer = String(gcd(first, second));
+  const answer = gcd(first, second);
 
   return {
+    introduction,
     question,
-    answer,
+    answer: answer.toString(),
   };
 };
 
-const start = () => {
-  startGame(getIntroduction, getGameData);
-};
+const start = () => startGame(getGameData);
 
 export default start;

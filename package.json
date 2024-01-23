@@ -4,7 +4,13 @@
   "description": "The set of mini-games launched from the console",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint",
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "keywords": [],
   "author": "",
@@ -19,11 +25,12 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "@types/readline-sync": "1.4.8",
+    "eslint": "8.42.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.27.5"
   }
 }

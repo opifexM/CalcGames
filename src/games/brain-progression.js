@@ -1,10 +1,8 @@
-#!/usr/bin/env node
+import startGame from '../index.js';
 import getRandomInteger from '../utils/random.js';
-import startGame from './brain-games.js';
-
-const getIntroduction = () => 'What number is missing in the progression?';
 
 const getGameData = () => {
+  const introduction = 'What number is missing in the progression?';
   const totalNumbers = getRandomInteger(5, 10);
   const hideIndex = getRandomInteger(2, totalNumbers);
   let lastNumber = getRandomInteger(1, 10);
@@ -16,7 +14,7 @@ const getGameData = () => {
       question += ' ';
     }
     if (i === hideIndex) {
-      answer = String(lastNumber);
+      answer = lastNumber;
       question += '..';
     } else {
       question += `${lastNumber}`;
@@ -24,13 +22,12 @@ const getGameData = () => {
     lastNumber += difference;
   }
   return {
+    introduction,
     question,
-    answer,
+    answer: answer.toString(),
   };
 };
 
-const start = () => {
-  startGame(getIntroduction, getGameData);
-};
+const start = () => startGame(getGameData);
 
 export default start;

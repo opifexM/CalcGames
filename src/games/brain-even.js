@@ -1,22 +1,23 @@
-#!/usr/bin/env node
+import startGame from '../index.js';
 import getRandomInteger from '../utils/random.js';
-import startGame from './brain-games.js';
 
-const getIntroduction = () => 'Answer "yes" if the number is even, otherwise answer "no".';
-
+/**
+ *
+ * @returns {GameData}
+ */
 const getGameData = () => {
-  const question = String(getRandomInteger(1, 100));
+  const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const question = getRandomInteger();
   const isEven = question % 2 === 0;
   const answer = isEven ? 'yes' : 'no';
 
   return {
-    question,
+    introduction,
+    question: question.toString(),
     answer,
   };
 };
 
-const start = () => {
-  startGame(getIntroduction, getGameData);
-};
+const start = () => startGame(getGameData);
 
 export default start;

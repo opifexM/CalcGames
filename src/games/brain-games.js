@@ -1,20 +1,21 @@
-import { getUserAnswer, sendConsoleText } from '../cli.js';
-import startTurn from '../index.js';
+import startGame from '../index.js';
 
-const GAME_ATTEMPTS = 3;
+/**
+ *
+ * @returns {WelcomeData}
+ */
+const getUserName = () => {
+  const welcome = 'Welcome to the Brain Games!';
+  const question = 'May I have your name?: ';
+  const hello = 'Hello, ';
 
-const startGame = (getIntroduction, getGameData) => {
-  sendConsoleText('Welcome to the Brain Games!');
-  const name = getUserAnswer('May I have your name?: ');
-  sendConsoleText(`Hello, ${name}`);
-
-  if (typeof getIntroduction === 'function' && typeof getGameData === 'function') {
-    if (startTurn(GAME_ATTEMPTS, getIntroduction, getGameData)) {
-      sendConsoleText(`Congratulations, ${name}!`);
-    } else {
-      sendConsoleText(`Let's try again, ${name}!`);
-    }
-  }
+  return {
+    welcome,
+    question,
+    hello,
+  };
 };
 
-export default startGame;
+const start = () => startGame();
+
+export { start, getUserName };

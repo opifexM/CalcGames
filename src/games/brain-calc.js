@@ -1,6 +1,5 @@
-#!/usr/bin/env node
+import startGame from '../index.js';
 import getRandomInteger from '../utils/random.js';
-import startGame from './brain-games.js';
 
 const OPERATORS = {
   '+': (a, b) => a + b,
@@ -9,23 +8,25 @@ const OPERATORS = {
 };
 const OPERATOR_KEYS = Object.keys(OPERATORS);
 
-const getIntroduction = () => 'What is the result of the expression?';
-
+/**
+ *
+ * @returns {GameData}
+ */
 const getGameData = () => {
-  const first = getRandomInteger(1, 100);
-  const second = getRandomInteger(1, 100);
+  const introduction = 'What is the result of the expression?';
+  const first = getRandomInteger();
+  const second = getRandomInteger();
   const operator = OPERATOR_KEYS[getRandomInteger(0, OPERATOR_KEYS.length - 1)];
   const question = `${first} ${operator} ${second}`;
-  const answer = String(OPERATORS[operator](first, second));
+  const answer = OPERATORS[operator](first, second);
 
   return {
+    introduction,
     question,
-    answer,
+    answer: answer.toString(),
   };
 };
 
-const start = () => {
-  startGame(getIntroduction, getGameData);
-};
+const start = () => startGame(getGameData);
 
 export default start;
