@@ -1,5 +1,3 @@
-import startGame from '../index.js';
-
 /**
  *
  * @returns {WelcomeData}
@@ -16,6 +14,4 @@ const getUserName = () => {
   };
 };
 
-const start = () => startGame();
-
-export { start, getUserName };
+export default getUserName;

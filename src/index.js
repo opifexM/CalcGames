@@ -1,5 +1,5 @@
 import { getUserAnswer, sendConsoleText } from './cli.js';
-import { getUserName } from './games/brain-games.js';
+import getUserName from './games/brain-games.js';
 
 const GAME_ATTEMPT = 3;
 
