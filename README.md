@@ -44,3 +44,6 @@ For example, to play the "brain-calc" game, you would run:
 ```
 node bin/brain-calc.js
 ```
+
+### asciinema
+https://asciinema.org/a/fDlMH0Z6byF8J47vxouXyhfAJ
