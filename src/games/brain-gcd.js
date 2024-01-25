@@ -13,16 +13,16 @@ const gcd = (a, b) => {
  * @returns {GameData}
  */
 const getGameData = () => {
-  const introduction = 'Find the greatest common divisor of given numbers.';
+  const instruction = 'Find the greatest common divisor of given numbers.';
   const first = getRandomInteger();
   const second = getRandomInteger();
   const question = `${first} ${second}`;
-  const answer = gcd(first, second);
+  const correctAnswer = gcd(first, second);
 
   return {
-    introduction,
+    instruction,
     question,
-    answer: answer.toString(),
+    correctAnswer: correctAnswer.toString(),
   };
 };
 

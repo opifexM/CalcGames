@@ -3,41 +3,28 @@ import getUserName from './games/brain-games.js';
 
 const GAME_ATTEMPT = 3;
 
-const startGameTurn = (getGameData) => {
+/**
+ *
+ * @param {() => GameData} getGameData
+ */
+const startGame = (getGameData) => {
+  const userName = getUserName();
+  let isGameSuccess = true;
   for (let i = 0; i < GAME_ATTEMPT; i += 1) {
-    /**
-     * @type {GameData}
-     */
     const gameData = getGameData();
     if (i === 0) {
-      sendConsoleText(gameData.introduction);
+      sendConsoleText(gameData.instruction);
     }
     sendConsoleText(`Question: ${gameData.question}`);
     const userAnswer = getUserAnswer('Your answer: ');
-    if (userAnswer === gameData.answer) {
+    if (userAnswer === gameData.correctAnswer) {
       sendConsoleText('Correct!');
     } else {
       sendConsoleText(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
-      return false;
+      isGameSuccess = false;
     }
   }
-  return true;
-};
 
-const startGame = (getGameData) => {
-  /**
-   * @type {WelcomeData}
-   */
-  const welcomeData = getUserName();
-  sendConsoleText(welcomeData.welcome);
-  const userName = getUserAnswer(welcomeData.question);
-  sendConsoleText(`${welcomeData.hello}${userName}`);
-
-  if (!getGameData) {
-    return;
-  }
-
-  const isGameSuccess = startGameTurn(getGameData);
   if (isGameSuccess) {
     sendConsoleText(`Congratulations, ${userName}!`);
   } else {

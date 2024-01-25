@@ -1,15 +1,7 @@
 /**
  * @typedef {{
- *   introduction: string
+ *   instruction: string
  *   question: string
- *   answer: string
+ *   correctAnswer: string
  * }} GameData
- */
-
-/**
- * @typedef {{
- *   welcome: string
- *   question: string
- *   hello: string
- * }} WelcomeData
  */

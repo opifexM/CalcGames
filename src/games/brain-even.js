@@ -1,20 +1,23 @@
 import startGame from '../index.js';
 import getRandomInteger from '../utils/random.js';
 
+function isEven(question) {
+  return question % 2 === 0;
+}
+
 /**
  *
  * @returns {GameData}
  */
 const getGameData = () => {
-  const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const instruction = 'Answer "yes" if the number is even, otherwise answer "no".';
   const question = getRandomInteger();
-  const isEven = question % 2 === 0;
-  const answer = isEven ? 'yes' : 'no';
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
   return {
-    introduction,
+    instruction,
     question: question.toString(),
-    answer,
+    correctAnswer,
   };
 };
 
