@@ -9,19 +9,22 @@ const GAME_ATTEMPT = 3;
  */
 const startGame = (getGameData) => {
   const userName = getUserName();
+
   let isGameSuccess = true;
   for (let i = 0; i < GAME_ATTEMPT; i += 1) {
-    const gameData = getGameData();
+    const { question, correctAnswer, instruction } = getGameData();
     if (i === 0) {
-      sendConsoleText(gameData.instruction);
+      sendConsoleText(instruction);
     }
-    sendConsoleText(`Question: ${gameData.question}`);
+    sendConsoleText(`Question: ${question}`);
+
     const userAnswer = getUserAnswer('Your answer: ');
-    if (userAnswer === gameData.correctAnswer) {
+    if (userAnswer === correctAnswer) {
       sendConsoleText('Correct!');
     } else {
-      sendConsoleText(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
+      sendConsoleText(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       isGameSuccess = false;
+      break;
     }
   }
 
