@@ -8,12 +8,13 @@ const OPERATORS = {
 };
 const OPERATOR_KEYS = Object.keys(OPERATORS);
 
+const instruction = 'What is the result of the expression?';
+
 /**
  *
  * @returns {GameData}
  */
 const getGameData = () => {
-  const instruction = 'What is the result of the expression?';
   const first = getRandomInteger();
   const second = getRandomInteger();
   const operator = OPERATOR_KEYS[getRandomInteger(0, OPERATOR_KEYS.length - 1)];
@@ -21,12 +22,11 @@ const getGameData = () => {
   const correctAnswer = OPERATORS[operator](first, second);
 
   return {
-    instruction,
     question,
     correctAnswer: correctAnswer.toString(),
   };
 };
 
-const start = () => startGame(getGameData);
+const start = () => startGame(instruction, getGameData);
 
 export default start;
