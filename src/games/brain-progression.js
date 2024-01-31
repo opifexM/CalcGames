@@ -3,7 +3,9 @@ import getRandomInteger from '../utils/random.js';
 
 const instruction = 'What number is missing in the progression?';
 
-function getProgression(totalNumbers, hideIndex, lastNumber, difference) {
+function getProgressionQuestionAndAnswer({
+  totalNumbers, hideIndex, lastNumber, difference,
+}) {
   let question = '';
   let correctAnswer = '';
   let currentLastNumber = lastNumber;
@@ -37,7 +39,14 @@ const getGameData = () => {
   const {
     question,
     correctAnswer,
-  } = getProgression(totalNumbers, hideIndex, lastNumber, difference);
+  } = getProgressionQuestionAndAnswer(
+    {
+      difference,
+      hideIndex,
+      lastNumber,
+      totalNumbers,
+    },
+  );
 
   return {
     question,

@@ -12,6 +12,7 @@ The project is implemented in JavaScript and utilizes a number of technologies a
 
 -   JavaScript (ES6)
 -   Node.js
+-   JSDoc
 -   npm
 -   readline-sync
 -   GitHub Actions
@@ -39,11 +40,33 @@ npm install
 
 ### Usage
 After installation, you can run any game directly from the command line. 
-For example, to play the "brain-calc" game, you would run:
 
-```
-node bin/brain-calc.js
+To play the "brain-games" game:
+```bash
+npm run brain-games
 ```
 
-### asciinema
-https://asciinema.org/a/fDlMH0Z6byF8J47vxouXyhfAJ
+To play the "brain-even" game:
+```bash
+npm run brain-even
+```
+
+To play the "brain-calc" game:
+```bash
+npm run brain-calc
+```
+
+To play the "brain-gcd" game:
+```bash
+npm run brain-gcd
+```
+
+To play the "brain-progression" game:
+```bash
+npm run brain-progression
+```
+
+To play the "brain-prime" game:
+```bash
+npm run brain-prime
+```
