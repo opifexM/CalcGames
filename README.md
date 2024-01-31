@@ -1,4 +1,5 @@
 [![Actions Status](https://github.com/opifexM/CalcGames/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/opifexM/CalcGames/actions/workflows/hexlet-check.yml)
+[![Node CI](https://github.com/opifexM/CalcGames/actions/workflows/nodejs.yml/badge.svg)](https://github.com/opifexM/CalcGames/actions/workflows/nodejs.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7632ba626da107e573c0/maintainability)](https://codeclimate.com/github/opifexM/CalcGames/maintainability)
 
 ## Calc Games
